@@ -165,6 +165,7 @@
 ---@field headshotRate number 0..1 across all sessions
 
 ---@class AimlabNui
+---@field setReady fun()
 ---@field setSurface fun(surface: NuiSurface)
 ---@field acquireFocus fun(withMouse: boolean)
 ---@field releaseFocus fun()

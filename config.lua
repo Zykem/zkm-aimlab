@@ -10,7 +10,7 @@ Config.ownWeapon = false
 ---@type AimlabUIConfig
 Config.UI = {
     hudPosition  = 'center-right',
-    primaryColor = '#E53935',
+    primaryColor = '#72D3F4',
 }
 
 -- set enabled to false if you dont want to override weather and time
