@@ -32,7 +32,9 @@ A session starts, your position gets saved, and you're teleported to the trainin
       <img src="showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
     </td>
     <td width="50%">
-      <video src="https://streamable.com/j8ejvx" controls width="100%"></video>
+      <a href="https://streamable.com/j8ejvx">
+        <img src="https://cdn.streamable.com/image/j8ejvx.jpg" alt="Watch demo video" width="100%">
+      </a>
     </td>
   </tr>
 </table>
