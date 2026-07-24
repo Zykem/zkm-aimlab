@@ -26,18 +26,8 @@ A session starts, your position gets saved, and you're teleported to the trainin
 
 ## Showcase
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
-    </td>
-    <td width="50%">
-      <a href="https://streamable.com/j8ejvx" target="_blank">
-        <img src="showcases/video_thumbnail.png" alt="Watch demo video" width="100%">
-      </a>
-    </td>
-  </tr>
-</table>
+[![Watch the demo](showcases/video_thumbnail.png)](https://streamable.com/j8ejvx)
+<sub>Click to watch on Streamable (opens in same tab — use Ctrl/Cmd+click for new tab)</sub>
 
 ## Status
 
