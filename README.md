@@ -22,7 +22,7 @@ This was one of my first Svelte projects, so the UI doubled as a way to actually
 
 ## How it works
 
-A session starts, your position gets saved, and you're teleported to the training spot with a target spawned in front of you. The target moves depending on the gamemode. Every frame, its screen position is checked against your crosshair, if you're within tolerance the progress meter fills, otherwise it decays. Filling the meter counts as a hit and the UI updates live. When the session ends, the target despawns and you're put back where you started.
+A session starts, your position gets saved, and you're teleported to the training spot with a target spawned in front of you.
 
 ## Showcase
 
@@ -32,8 +32,8 @@ A session starts, your position gets saved, and you're teleported to the trainin
       <img src="showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
     </td>
     <td width="50%">
-      <a href="https://streamable.com/j8ejvx">
-        <img src="https://cdn.streamable.com/image/j8ejvx.jpg" alt="Watch demo video" width="100%">
+      <a href="https://streamable.com/j8ejvx" target="_blank">
+        <img src="showcases/video_thumbnail.png" alt="Watch demo video" width="100%">
       </a>
     </td>
   </tr>
