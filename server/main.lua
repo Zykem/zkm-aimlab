@@ -1,5 +1,6 @@
 local Config = lib.require 'config'
 local Db = lib.require 'server.modules.db'
+local Stats = lib.require 'server.modules.statsCache'
 
 Citizen.CreateThread(function()
     Db.ensureSchema()
@@ -8,12 +9,22 @@ end)
 ---@type table<integer, integer>
 local lastSaveAt = {}
 
-RegisterNetEvent('zykem_aimlab:server:saveSession', function(payload)
+RegisterNetEvent("zkm-aimlab:enterredSession", function(mode)
+    local src = source
+    if not mode or not Config.Aimlab.modeList[mode] then return end
+
+    SetPlayerRoutingBucket(src, src --[[@as integer]])
+end)
+
+RegisterNetEvent('zkm-aimlab:saveSession', function(payload)
     local src = source
     if type(payload) ~= 'table' then return end
 
     local mode = payload.mode
     if type(mode) ~= 'string' or not Config.Aimlab.modeList[mode] then return error(("Invalid mode: %s"):format(tostring(mode))) end
+
+    -- setting player routing bucket to 0 here just in case something goes wrong and wrong data gets sent
+    SetPlayerRoutingBucket(src, 0)
 
     local hits = math.floor(tonumber(payload.hits) or -1)
     local headshots = math.floor(tonumber(payload.headshots) or -1)
@@ -33,14 +44,20 @@ RegisterNetEvent('zykem_aimlab:server:saveSession', function(payload)
     Db.recordSession(identifier, hits, headshots)
 end)
 
-lib.callback.register('aimlab:getStats', function(source)
+lib.callback.register('zkm-aimlab:getStats', function(source)
     local identifier = GetPlayerIdentifierByType(source --[[@as string]], Config.Aimlab.session.identifierType)
-    local lifetimeStats = Db.getLifetime(identifier or '')
+    local stats = Stats.getStats(identifier)
+
+    if not stats then
+        stats = Db.getLifetime(identifier or '')
+        Stats.insertStats(identifier, stats)
+    end
+    
     return {
-        totalSessions  = lifetimeStats.total_sessions,
-        totalHits      = lifetimeStats.total_hits,
-        totalHeadshots = lifetimeStats.total_headshots,
-        headshotRate   = lifetimeStats.headshot_rate,
+        totalSessions  = stats.total_sessions,
+        totalHits      = stats.total_hits,
+        totalHeadshots = stats.total_headshots,
+        headshotRate   = stats.headshot_rate,
     }
 end)
 

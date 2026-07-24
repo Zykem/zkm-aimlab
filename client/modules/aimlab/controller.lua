@@ -155,6 +155,7 @@ function Aimlab.start(modeId)
     end
 
     mode.startMode(session, binding.opts)
+    TriggerServerEvent("zkm-aimlab:enterredSession", binding.mode)
     return true
 end
 
@@ -171,7 +172,7 @@ function Aimlab.stop()
         durationMs   = GetGameTimer() - startedAt,
     }
 
-    TriggerServerEvent('zykem_aimlab:server:saveSession', {
+    TriggerServerEvent('zkm-aimlab:saveSession', {
         mode      = result.mode,
         hits      = result.hits,
         headshots = result.headshots,
