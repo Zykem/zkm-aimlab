@@ -29,10 +29,10 @@ A session starts, your position gets saved, and you're teleported to the trainin
 <table>
   <tr>
     <td width="50%">
-      <img src="https://raw.githubusercontent.com/Zykem/zkm-aimlab/main/showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
+      <img src="showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
     </td>
     <td width="50%">
-      <video src="https://raw.githubusercontent.com/Zykem/zkm-aimlab/main/showcases/script_showcase.mp4" controls width="100%"></video>
+      <video src="showcases/script_showcase.mp4" controls width="100%"></video>
     </td>
   </tr>
 </table>
