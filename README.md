@@ -2,7 +2,7 @@
 
 A FiveM aim trainer with multiple gamemodes and a UI written in Svelte.
 
-Warp into a training area and practice your aim against configurable target patterns, basically a mini Aim Lab built for FiveM.
+TP into a training area and practice your aim against configurable target patterns, basically a mini aimlab built for FiveM.
 
 This was one of my first Svelte projects, so the UI doubled as a way to actually learn the framework.
 
@@ -23,6 +23,8 @@ This was one of my first Svelte projects, so the UI doubled as a way to actually
 ## How it works
 
 A session starts, your position gets saved, and you're teleported to the training spot with a target spawned in front of you. The target moves depending on the gamemode. Every frame, its screen position is checked against your crosshair, if you're within tolerance the progress meter fills, otherwise it decays. Filling the meter counts as a hit and the UI updates live. When the session ends, the target despawns and you're put back where you started.
+
+## Showcase
 
 ## Status
 
