@@ -26,7 +26,7 @@ A session starts, your position gets saved, and you're teleported to the trainin
 
 ## Showcase
 
-![FHD UI Preview](https://raw.githubusercontent.com/Zykem/zkm-aimlab/main/showcases/fhd_ui_preview.PNG)
+![FHD UI Preview](https://github.com/Zykem/zkm-aimlab/blob/884158833b75d51eec03ddc8c487b37887f08c43/showcases/fhd_ui_preview.PNG)
 
 ## Status
 
