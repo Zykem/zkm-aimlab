@@ -32,7 +32,7 @@ A session starts, your position gets saved, and you're teleported to the trainin
       <img src="showcases/fhd_ui_preview.PNG" alt="FHD UI Preview" width="100%">
     </td>
     <td width="50%">
-      <video src="https://github.com/Zykem/zkm-aimlab/blob/4d3923eca07e955f29701fa97dac79efe5a8b108/showcases/script_showcase.mp4" controls width="100%"></video>
+      <video src="showcases/script_showcase.mp4" controls width="100%"></video>
     </td>
   </tr>
 </table>
