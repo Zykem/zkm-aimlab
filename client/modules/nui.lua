@@ -1,8 +1,12 @@
----@type AimlabNui
 local Nui = {}
 
+local isReady = false
 local currentSurface = 'none' ---@type NuiSurface
 local mouseFocus     = false
+
+function Nui.setReady()
+    isReady = true
+end
 
 ---@param surface NuiSurface
 function Nui.setSurface(surface)
@@ -40,7 +44,12 @@ function Nui.hasMouseFocus() return mouseFocus end
 ---@param action string
 ---@param payload any
 function Nui.send(action, payload)
+    if not isReady then
+        lib.waitFor(function()
+            return isReady or nil
+        end, "Failed to resolve nui ready state", 20000)
+    end
     SendNUIMessage({ action = action, data = payload })
 end
 
-return Nui
+return Nui --[[@as AimlabNui]]

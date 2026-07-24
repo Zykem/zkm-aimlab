@@ -13,6 +13,7 @@ local function openMenu()
 end
 
 RegisterNUICallback('uiReady', function(_, cb)
+    Nui.setReady()
     cb({})
 end)
 
@@ -22,7 +23,7 @@ RegisterNUICallback('closeUi', function(_, cb)
 end)
 
 RegisterNUICallback('getStats', function(_, cb)
-    cb(lib.callback.await('aimlab:getStats', false))
+    cb(lib.callback.await('zkm-aimlab:getStats', false))
 end)
 
 RegisterNUICallback('getConfig', function(_, cb)
