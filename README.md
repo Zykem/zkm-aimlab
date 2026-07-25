@@ -26,6 +26,7 @@ A session starts, your position gets saved, and you're teleported to the trainin
 
 ## Showcase
 
+[![UI Showcase](showcases/preview.png)
 [![Watch the demo](showcases/video_thumbnail.png)](https://streamable.com/j8ejvx)
 <sub>Click to watch on Streamable (opens in same tab — use Ctrl/Cmd+click for new tab)</sub>
 
