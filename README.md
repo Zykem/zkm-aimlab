@@ -25,10 +25,9 @@ This was one of my first Svelte projects, so the UI doubled as a way to actually
 A session starts, your position gets saved, and you're teleported to the training spot with a target spawned in front of you.
 
 ## Showcase
-
 [![UI Showcase](showcases/preview.png)
-[![Watch the demo](showcases/video_thumbnail.png)](https://streamable.com/j8ejvx)
-<sub>Click to watch on Streamable (opens in same tab — use Ctrl/Cmd+click for new tab)</sub>
+[![Watch the demo](showcases/video_thumbnail.png)](https://www.youtube.com/watch?v=1BZm5tqssZE)
+<sub>Click to watch on YouTube</sub>
 
 ## Status
 
